@@ -72,7 +72,7 @@ namespace LiveSplit.BladedFury {
 			bool shouldSplit = false;
 			bool loading = mem.Loading();
 
-			if (currentSplit < Model.CurrentState.Run.Count && currentSplit < settings.Splits.Count) {
+			if (currentSplit <= Model.CurrentState.Run.Count && currentSplit < settings.Splits.Count) {
 				SplitName split = settings.Splits[currentSplit];
 
 				switch (split) {
@@ -87,12 +87,22 @@ namespace LiveSplit.BladedFury {
 						}
 						lastSaveName = saveName;
 						break;
-					case SplitName.DukeKang: shouldSplit = !loading && scene == "0104" && BossSplit("Bs004"); break;
+					case SplitName.DukeKang: shouldSplit = !loading && scene == "0102" && BossSplit("Bs004"); break;
+					case SplitName.GeneralWu1: shouldSplit = !loading && scene == "0309" && BossSplit("Bs002"); break;
+					case SplitName.GeneralWu2: shouldSplit = !loading && scene == "0322" && BossSplit("Bs002_undead"); break;
+					case SplitName.XiaZhengshu1: shouldSplit = !loading && scene == "0406" && BossSplit("Bs005"); break;
+					case SplitName.Wen: shouldSplit = !loading && scene == "0420" && BossSplit("Bs001"); break;
+					case SplitName.Bogu1: shouldSplit = !loading && scene == "0525" && BossSplit("Bs006"); break;
+					case SplitName.EmperorOfZhou: shouldSplit = !loading && scene == "0610" && BossSplit("Bs007"); break;
+					case SplitName.TheSerpent: shouldSplit = !loading && scene == "0620" && BossSplit("Bs008"); break;
+					case SplitName.GeneralWu3: shouldSplit = !loading && scene == "0703" && BossSplit("Bs002_dead"); break;
+					case SplitName.XiaZhengshu2: shouldSplit = !loading && scene == "0704" && BossSplit("Bs005_dead"); break;
+					case SplitName.Bogu2: shouldSplit = !loading && scene == "0705" && BossSplit("Bs006_dead"); break;
 					case SplitName.TianRangju: shouldSplit = !loading && scene == "0707" && BossSplit("Bs009"); break;
 				}
 			}
 
-			Model.CurrentState.IsGameTimePaused = Model.CurrentState.CurrentPhase != TimerPhase.Running || loading || scene == "TransitionScene";
+			Model.CurrentState.IsGameTimePaused = Model.CurrentState.CurrentPhase != TimerPhase.Running || loading || scene == "_Loading";
 
 			HandleSplit(shouldSplit, false);
 		}

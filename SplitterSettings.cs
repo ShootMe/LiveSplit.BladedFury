@@ -127,9 +127,9 @@ namespace LiveSplit.BladedFury {
 			Splits.Add(SplitName.Bogu1);
 			Splits.Add(SplitName.EmperorOfZhou);
 			Splits.Add(SplitName.TheSerpent);
-			Splits.Add(SplitName.GeneralWu3);
 			Splits.Add(SplitName.XiaZhengshu2);
 			Splits.Add(SplitName.Bogu2);
+			Splits.Add(SplitName.GeneralWu3);
 			Splits.Add(SplitName.TianRangju);
 
 			LoadSettings();
