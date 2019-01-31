@@ -2,7 +2,7 @@
 using LiveSplit.UI.Components;
 using System.Reflection;
 using System.Runtime.InteropServices;
-[assembly: AssemblyTitle("LiveSplit.Bladed Fury")]
+[assembly: AssemblyTitle("LiveSplit.BladedFury")]
 [assembly: AssemblyDescription("Autosplitter for Bladed Fury")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
